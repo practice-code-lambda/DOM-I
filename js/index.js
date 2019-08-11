@@ -48,11 +48,11 @@ hero.setAttribute('src', siteContent["cta"]["img-src"])
 
 let navItems = document.querySelectorAll('a');
 
-navItems[0].textContent = siteContent.nav['nav-item-1']
-navItems[1].textContent = siteContent.nav['nav-item-2']
-navItems[2].textContent = siteContent.nav['nav-item-3']
-navItems[3].textContent = siteContent.nav['nav-item-4']
-navItems[4].textContent = siteContent.nav['nav-item-5']
+
+navItems.forEach((item, i)=>{
+  console.log(item)
+  item.textContent =  siteContent.nav[`nav-item-${i}`]
+})
 
 let ctaText = document.querySelectorAll('h1')
 
@@ -61,5 +61,10 @@ ctaText[0].textContent = siteContent.cta.h1;
 let button = document.querySelectorAll('button')
 button[0].textContent = siteContent.cta.button
 
+let Features = document.querySelector('.top-content h4')
+Features.textContent = siteContent["main-content"]["features-h4"]
+
+let about = document.querySelectorAll(".top-content h4")
+about[1].textContent = siteContent["main-content"]["about-h4"]
 
 
